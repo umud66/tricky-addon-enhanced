@@ -1,3 +1,11 @@
+## v5.53.3 — Diag4.1 proxy and asynchronous manual keybox restoration
+
+- Restore Diag4.1's asynchronous manual keybox downloader with four-source fallback: Yurikey, KOWX712, DareDevilEx, MeowDump.
+- Add HTTPS proxy prefix mode, source priority, progress status, and network/decode/PEM/validation/install diagnostics.
+- Preserve customized WebUI: target autosave, boot_props_mode Auto/Force/Disable control, and friendly app names.
+- Reproduce ta-key-compat using auditable Go source; GitHub Actions builds all four architectures. SEC1/PKCS#1 PEM is normalized to equivalent PKCS#8; the original Rust certificate-chain verification remains mandatory.
+- Scope: extends WebUI **manual** fetch only. Scheduled automatic Rust fetching still uses the unchanged original sources.
+
 ## v5.53.2
 
 - WebUI: TEESimulator-RS boot_props_mode Auto / Force / Disable switch (save + reboot).
