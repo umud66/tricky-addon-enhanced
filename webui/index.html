@@ -512,6 +512,23 @@
                     <div class="accent-picker" id="accent-picker"></div>
                 </div>
 
+                <!-- TEESimulator-RS configuration, independent of TA Enhanced flags. -->
+                <div class="setting-section" id="teesimulator-boot-mode">
+                    <div class="setting-header">启动属性模式 / Boot-state properties</div>
+                    <p style="font-size:12px;opacity:.75">配置 TEESimulator-RS 的全局启动属性。Auto 在 OPPO / Oplus 设备上跳过修改。Force 可能影响指纹与厂商服务；不代表真正锁定 Bootloader。</p>
+                    <div class="interval-custom">
+                        <select id="boot-props-mode" class="interval-input" aria-label="Boot props mode">
+                            <option value="auto">自动 / Auto（OPPO 跳过）</option>
+                            <option value="force">强制 / Force（需谨慎）</option>
+                            <option value="disable">禁用 / Disable</option>
+                        </select>
+                        <button id="boot-props-save" class="interval-chip interval-set-btn" type="button">保存 / Save</button>
+                    </div>
+                    <div id="boot-props-result" role="status" aria-live="polite" style="font-size:12px;min-height:20px;margin-top:8px"></div>
+                    <div id="boot-props-observed" style="font-size:11px;opacity:.7;white-space:pre-line"></div>
+                    <p style="font-size:12px;opacity:.75">保存后需要重启手机。当前 TEESimulator 不会创建原本缺失的 ro.boot.* 属性。</p>
+                </div>
+
                 <div class="setting-section">
                     <div class="setting-header" data-i18n="automation_compat_header">Compatibility</div>
                     <div class="setting-row">
@@ -720,5 +737,6 @@
         else init();
     })();
     </script>
+    <script src="./enhancements.js" defer></script>
 </body>
 </html>

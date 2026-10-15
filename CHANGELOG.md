@@ -1,3 +1,10 @@
+## v5.53.2
+
+- WebUI: TEESimulator-RS boot_props_mode Auto / Force / Disable switch (save + reboot).
+- WebUI: show readable app labels alongside package IDs, including an APK/aapt fallback on older KernelSU WebUI hosts.
+- WebUI: preserve customized autosave, keybox badge and existing compatibility controls.
+- OTA metadata points to the umud66 fork.
+
 # Changelog
 
 ## v5.53.1 (2026-05-01)
