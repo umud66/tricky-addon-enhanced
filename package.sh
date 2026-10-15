@@ -245,7 +245,7 @@ zip -r9 "$ZIP_PATH" . \
     -x "*.swp" -x "*~" \
     -x "release/*" \
     -x "package.sh" \
-    -x "rust/*"
+    -x "rust/*" \
     -x "tools/*" \
     -x "node_modules/*" \
     -x "webui/src/*" \
